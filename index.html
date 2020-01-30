@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body id="body">
-    <header>
+<body>
+    <div id="particles-js"></div>
+
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+
         <nav>
           <label>
             <input onclick="verifyCheck()" type="checkbox" id="check">
@@ -21,6 +25,7 @@
             </ul>
           </label>
         </nav>
+    <header>
         <div class="titre" id="titre">
             <h1>Clément Le Caloch</h1>
             <h2>Étudiant en 2ème année de DUT Informatique</h2>
@@ -39,6 +44,25 @@
             titre.style.transform = "inherit";
         }
     }
+</script>
+<script>
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
 </script>
 
 

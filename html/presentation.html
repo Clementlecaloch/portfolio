@@ -20,9 +20,9 @@
           </ul>
         </label>
       </nav>
-      <h1>Présentation</h1>
+      <h1 id="titre" class="titre-centre">Présentation</h1>
       <main>
-        <div class="container" id="titre">
+        <div class="container" id="container">
           <div class="card">
             <div class="face face1">
               <div class="content">
@@ -34,7 +34,7 @@
               <div class="content">
                 <section>
                   <b>Été 2017 - 2018 :</b><br>
-                  Encadrement de camp de basket de 1 semaine, à Guéret et Arcachon
+                  Encadrement de camps de basket de 1 semaine, à Guéret et Arcachon
                 </section>
                 <section>
                   <b>2018 - 2019 :</b><br>
@@ -71,16 +71,18 @@
             <div class="face face1">
               <div class="content">
                 <img src="../img/passion.png" alt="">
-                <h3>Passion</h3>
+                <h3>Passions</h3>
               </div>
             </div>
             <div class="face face2">
               <div class="content">
                 <section>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Aut dolor esse, illum incidunt molestiae quaerat quia quibusdam
-                  quo sint ullam! Debitis dolorem ea fugiat quam quisquam repellendus
-                  reprehenderit rerum saepe?
+                  <b>Voyage : </b><br>
+                  Espagne, Angleterre, Irlande, Italie, Autriche, Hongrie, République Tchèque, Slovaquie,…
+                </section>
+                <section>
+                  <b>Basket : </b><br>
+                  Joueur depuis 11 ans, coach et arbitre. Plusieurs tournois en Espagne durant l'été
                 </section>
               </div>
             </div>
@@ -94,20 +96,16 @@
   function verifyCheck() {
     let checked = document.getElementById('check');
     let titre = document.getElementById('titre');
+    let container = document.getElementById('container')
     if (checked.checked == true) {
       titre.style.transitionDuration = "0.4s";
-      titre.style.transform = "perspective(1200px) scale(0.8) translateX(-15%) rotateY(15deg)";
+      titre.style.transform = "perspective(1200px) scale(0.8) translateX(-25%) rotateY(15deg)";
+      container.style.transitionDuration = "0.4s";
+      container.style.transform = "perspective(1200px) scale(0.8) translateX(-15%) rotateY(15deg)";
     } else {
       titre.style.transform = "inherit";
+      container.style.transform = "inherit";
     }
   }
 </script>
 
-<style>
-  h1 {
-    position: absolute;
-    width: 100%;
-    top:50px;
-    text-align: center;
-  }
-</style>
