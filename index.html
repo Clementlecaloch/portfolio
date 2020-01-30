@@ -5,49 +5,41 @@
     <title>Clément Le Caloch, Étudiant en Informatique</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
 </head>
-<body>
-<header>
-    <nav>
-        <a href="#presentation">Presentation</a>
-        <a href="#projet">Projets</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="titre">
-        <h1>Clément Le Caloch</h1>
-        <h2>Étudiant en 2ème année de DUT Informatique</h2>
-    </div>
-    <div class="ligne">
-        <div class="info">
-            <span>18 ans</span>
-            <div class="trait"></div>
+<body id="body">
+    <header>
+        <nav>
+          <label>
+            <input onclick="verifyCheck()" type="checkbox" id="check">
+            <span class="menu">
+              <span class="hamburger"></span>
+            </span>
+            <ul>
+              <li><a href="html/presentation.html">Présentation</a></li>
+              <li><a href="html/projets.html">Projets</a></li>
+              <li><a href="html/contact.html">Contact</a></li>
+            </ul>
+          </label>
+        </nav>
+        <div class="titre" id="titre">
+            <h1>Clément Le Caloch</h1>
+            <h2>Étudiant en 2ème année de DUT Informatique</h2>
         </div>
-        <div class="info">
-            <span>Frontend</span>
-            <div class="trait"></div>
-        </div>
-        <div class="info">
-            <span>Limoges</span>
-            <div class="trait"></div>
-        </div>
-    </div>
-
-</header>
-
-<main>
-    <div id="presentation">
-        <h1>Presentation</h1>
-    </div>
-    <div id="projet">
-        <h1>Projets</h1>
-    </div>
-    <div id="contact">
-        <h1>Contact</h1>
-    </div>
-</main>
-
+    </header>
 </body>
+
+<script>
+    function verifyCheck() {
+        let checked = document.getElementById('check');
+        let titre = document.getElementById('titre');
+        if (checked.checked == true) {
+            titre.style.transitionDuration = "0.4s";
+            titre.style.transform = "perspective(1200px) scale(0.8) translateX(-15%) rotateY(15deg)";
+        } else {
+            titre.style.transform = "inherit";
+        }
+    }
+</script>
 
 
 </html>

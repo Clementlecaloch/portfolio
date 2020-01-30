@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Présentation</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+      <nav>
+        <label>
+          <input onclick="verifyCheck()" type="checkbox" id="check">
+          <span class="menu">
+            <span class="hamburger"></span>
+          </span>
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </label>
+      </nav>
+      <h1>Présentation</h1>
+      <main>
+        <div class="container" id="titre">
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img src="../img/work.png" alt="">
+                <h3>Expériences</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <section>
+                  <b>Été 2017 - 2018 :</b><br>
+                  Encadrement de camp de basket de 1 semaine, à Guéret et Arcachon
+                </section>
+                <section>
+                  <b>2018 - 2019 :</b><br>
+                  Service civique dans un club de basket, gestion des réseaux sociaux et du site web avec Joomla
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img src="../img/scolarite.png" alt="">
+                <h3>Scolarité</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <section>
+                  <b>2018 : </b><br>
+                  Baccalauréat Scientifique option SVT, obtenu avec mention Très Bien <br>
+                  <i>Lycée Raymond Loewy, La Souterraine</i>
+                </section>
+                <section>
+                  <b>2018 - 2020 : </b><br>
+                  DUT Informatique <br>
+                  <i>Université du Limousin, Limoges</i>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img src="../img/passion.png" alt="">
+                <h3>Passion</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <section>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aut dolor esse, illum incidunt molestiae quaerat quia quibusdam
+                  quo sint ullam! Debitis dolorem ea fugiat quam quisquam repellendus
+                  reprehenderit rerum saepe?
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+  </body>
+</html>
+
+<script>
+  function verifyCheck() {
+    let checked = document.getElementById('check');
+    let titre = document.getElementById('titre');
+    if (checked.checked == true) {
+      titre.style.transitionDuration = "0.4s";
+      titre.style.transform = "perspective(1200px) scale(0.8) translateX(-15%) rotateY(15deg)";
+    } else {
+      titre.style.transform = "inherit";
+    }
+  }
+</script>
+
+<style>
+  h1 {
+    position: absolute;
+    width: 100%;
+    top:50px;
+    text-align: center;
+  }
+</style>
